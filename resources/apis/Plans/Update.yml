@@ -1,0 +1,41 @@
+info:
+  name: Update
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{base_url}}/plans/:plan_id"
+  params:
+    - name: plan_id
+      value: 650ffe19-00fb-43ba-943d-b4bd7dc26f11
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Test plan",
+        "slug": "test",
+        "description": "test lorem ipsum dolor",
+        "currency": "PHP",
+        "price_cents": "150",
+        "is_active": true,
+        "sort_order": 1,
+        "limits": {  
+            "notes": null, 
+            "pomodoro": null, 
+            "reminders": null, 
+            "kanban_tasks": null, 
+            "kanban_boards": null, 
+            "attachments_mb": 25600, 
+            "journal_entries": null, 
+            "publishing_platform": true
+         }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

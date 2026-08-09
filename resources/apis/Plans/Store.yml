@@ -1,0 +1,37 @@
+info:
+  name: Store
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/plans"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Test plan",
+        "slug": "test",
+        "description": "test lorem ipsum dolor",
+        "currency": "PHP",
+        "price_cents": "150",
+        "is_active": true,
+        "sort_order": 1,
+        "limits": {  
+            "notes": null, 
+            "pomodoro": null, 
+            "reminders": null, 
+            "kanban_tasks": null, 
+            "kanban_boards": null, 
+            "attachments_mb": 25600, 
+            "journal_entries": null, 
+            "publishing_platform": true
+         }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

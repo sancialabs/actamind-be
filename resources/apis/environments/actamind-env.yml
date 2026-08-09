@@ -1,0 +1,4 @@
+name: actamind-env
+variables:
+  - name: base_url
+    value: localhost:82/api/v1
