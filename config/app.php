@@ -17,6 +17,21 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Frontend URL
+    |--------------------------------------------------------------------------
+    |
+    | This value is the base URL of your frontend application (Next.js). It's
+    | used when the backend needs to redirect the browser back to the client
+    | after server-side flows complete — for example, sending the user back
+    | to the frontend with an auth code after a successful Google OAuth
+    | callback.
+    |
+    */
+
+    'frontend_url' => env('FRONTEND_URL', 'http://localhost:3000'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Environment
     |--------------------------------------------------------------------------
     |
